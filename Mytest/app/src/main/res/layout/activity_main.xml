@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#1A23FF"
+        android:padding="30dp"
+        android:text="신상털기"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:hint="이름."/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="전화번호."
+        android:textSize="20sp"
+        android:inputType="phone" />
+
+    <ImageView
+        android:id="@+id/imgCenter"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/you" />
+
+    <Button
+        android:id="@+id/btnclick"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:textSize = "20sp"
+        android:textColor="#ffffff"
+        android:background="#f832ed"
+        android:text="내 신상은" />
+</LinearLayout>

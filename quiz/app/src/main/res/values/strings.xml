@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">quiz</string>
+
+    <string name="q1">꿀벌은 15mph로 날 수 있습니다.</string>
+    <string name="q2">해파리는 약 95 %의 물입니다.!</string>
+    <string name="q3">코끼리는 뛸 수없는 유일한 포유류입니다</string>
+    <string name="q4">고양이는 초음파를들을 수 있습니다.</string>
+    <string name="q5">인간의 뇌는 약 3 파운드입니다.</string>
+    <string name="q6">혀는 신체의 가장 빠른 치유 부분입니다.</string>
+    <string name="q7">미국인들은 평균적으로 하루에 18 에이커의 "피자"를 먹습니다.</string>
+    <string name="q8">캥거루는 30 피트를 뛰어 넘을 수 있습니다.</string>
+    <string name="q9">비둘기의 깃털은 뼈보다 무겁습니다.</string>
+    <string name="q10">가장 키가 큰 사람은 8 피트 11 인치였습니다.</string>
+
+</resources>

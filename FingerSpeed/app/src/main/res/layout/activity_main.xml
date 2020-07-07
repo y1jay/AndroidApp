@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00ff00"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:text="@string/txtview"
+        android:textSize="30sp"
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/txtCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ff000f"
+        android:textSize="30sp"
+        android:text="@string/txtcnt" />
+
+    <Button
+            android:id="@+id/btnTap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="100dp"
+            android:background="#0000ff"
+            android:textColor="#ff000f"
+            android:textSize="30sp"
+            android:text="@string/btn" />
+
+    <TextView
+        android:id="@+id/txtch"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center" />
+</LinearLayout>

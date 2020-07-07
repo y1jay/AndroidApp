@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Finger Speed</string>
+    <string name="txtview">TextView</string>
+    <string name="btn">눌러눌러!</string>
+    <string name="txtcnt">TextView</string>
+    <string name="txtch">txtch</string>
+</resources>

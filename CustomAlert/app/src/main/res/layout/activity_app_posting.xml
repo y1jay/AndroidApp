@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".AppPosting">
+
+
+    <EditText
+        android:id="@+id/editTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="60dp"
+        android:ems="10"
+        android:fontFamily="@font/nanumbrush"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editBody2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:ems="10"
+        android:fontFamily="@font/nanumbrush"
+        android:hint="Body"
+        android:inputType="textPersonName"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnSave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="60dp"
+        android:fontFamily="@font/nanumbrush"
+        android:text="저장"
+        android:textSize="30sp" />
+
+</LinearLayout>

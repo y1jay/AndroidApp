@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.yijun.fab.MainActivity">
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/where"
+        android:orderInCategory="3"
+        android:title="추가"
+        app:showAsAction="ifRoom" />
+</menu>

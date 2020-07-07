@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">흐아아악</string>
+    <string name="txtview">퍼센트계산기</string>
+    <string name="txtper">퍼센트입력</string>
+    <string name="Percent">퍼센트 :</string>
+    <string name="score">당신의 점수 :</string>
+    <string name="txtstring">점수 입력</string>
+    <string name="calnow">계산시작</string>
+    <string name="result">Result</string>
+    <string name="title">계산종료"</string>
+    <string name="alertbtn">"끝"</string>
+
+
+
+</resources>

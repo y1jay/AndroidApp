@@ -1,0 +1,4 @@
+rootProject.name='Mytest1'
+include ':app'
+include ':libjava'
+include ':libtest1'
