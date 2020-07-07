@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "696316205124",
+    "firebase_url": "https://firestore-a19f0.firebaseio.com",
+    "project_id": "firestore-a19f0",
+    "storage_bucket": "firestore-a19f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696316205124:android:62c61b0d96028706c44411",
+        "android_client_info": {
+          "package_name": "com.yijun.firestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696316205124-up9jk7ecmmulgrsh2vv551sgn07egecm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yijun.firestore",
+            "certificate_hash": "ff710b2baa5b3181d3bb8d711a9e122bdce17fde"
+          }
+        },
+        {
+          "client_id": "696316205124-p6ehla3u15obn5tnjv01432fknnk3u7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACVImMmexvnQTx5YzdXP2dGAqssgMfygw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696316205124-p6ehla3u15obn5tnjv01432fknnk3u7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
