@@ -27,14 +27,15 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
         Intent i = getIntent();
         lat = i.getDoubleExtra("lat", 37.5412538);
         lng = i.getDoubleExtra("lng", 126.8359702);
         storeArrayList = (ArrayList<Store>) i.getSerializableExtra("all");
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
     }
 
 
@@ -51,7 +52,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng me = new LatLng(lat, lng);
+        LatLng me = new LatLng(lat,lng);
 
         for(Store store : storeArrayList){
             MarkerOptions options = new MarkerOptions()
