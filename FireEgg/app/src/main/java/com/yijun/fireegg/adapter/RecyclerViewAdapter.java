@@ -28,6 +28,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.yijun.fireegg.MainActivity;
 import com.yijun.fireegg.R;
+import com.yijun.fireegg.UpdateActivity;
 import com.yijun.fireegg.person.Contact;
 
 import org.w3c.dom.Text;
@@ -40,6 +41,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context context;
     ArrayList<Contact> contactArrayList;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
+
+    int id;
 
     // 1. 생성자 만들기
     public RecyclerViewAdapter(Context context, ArrayList<Contact> contactArrayList){
@@ -102,23 +105,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 public void onClick(View v) {
                     //수정 엑티비티로 넘어가는 코드 작성
 
-//
-//                    Intent i = new Intent(context, UpdateActivity.class);
-//                    //유저가 클릭한 셀의인덱스를 가져온다. 이 인덱스만 알면, 어레이리스트에서
-//                    //데이터 꺼내올 수 있다
-//                    int index = getAdapterPosition();//유저가 누른게 몇번째냐
-//                    Contact contact = contactList.get(index);
-//                    String id = contact.getId();
-//                    String name = contact.getName();
-//                    String phone = contact.getNumber();
-//                    //업데이트 엑티비티로 넘겨줄 수 있다
-//                    i.putExtra("id",id);
-//                    i.putExtra("name",name);
-//                    i.putExtra("phone",phone);
-//                    context.startActivity(i);
-//                    Toast.makeText(context,"이 셀은" + getAdapterPosition()+ "번째 셀 입니다.",
-//                            Toast.LENGTH_LONG).show();
-//                    //getAdapterPosition() 함수는, 현제 내가 클릭한 부분이, 몇번째 셀인지 알려준다.
+
+                    Intent i = new Intent(context, UpdateActivity.class);
+
+                    int index = getAdapterPosition();
+                    Contact contact = contactArrayList.get(index);
+
+                    i.putExtra("Contact",contact);
+                    context.startActivity(i);
 
                 }
 
@@ -144,7 +138,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                                         public void onSuccess(Void aVoid) {
                                             Toast.makeText(context,"데이터 삭제",
                                                     Toast.LENGTH_SHORT).show();
-                                            notifyDataSetChanged();
+
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
@@ -153,8 +147,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                                             Log.i("AAA",e.toString());
                                         }
                                     });
-
-                            //notifyItemchanged(index)라는 함수도 있다.
+                            ((MainActivity)context).recreate();
+//                            notifyDataSetChanged();
+//                            notifyItemChanged(index);
                         }
                     });
                     deleteAlert.setNegativeButton("No", null);

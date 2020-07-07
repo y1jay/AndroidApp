@@ -45,23 +45,6 @@ public static final String KEY_NUMBER ="Number";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnSave = findViewById(R.id.btnSave);
-        db.collection("Contact").get().addOnSuccessListener
-                (new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                for (QueryDocumentSnapshot snapshots : queryDocumentSnapshots) {
-                    Contact contact = snapshots.toObject(Contact.class);
-
-                    contactArrayList.add(contact);
-                }
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
 
 
         recyclerView = findViewById(R.id.recyclerView);
@@ -158,6 +141,8 @@ public static final String KEY_NUMBER ="Number";
                             contact.setId(id);
                             contactArrayList.add(contact);
                         }
+                        recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, contactArrayList);
+                        recyclerView.setAdapter(recyclerViewAdapter);
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -166,9 +151,8 @@ public static final String KEY_NUMBER ="Number";
 
                     }
                 });
-        //우리가 만든 하나의 셀 표시하는 어댑터를, 리사이클러뷰에 연결
-        recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, contactArrayList);
-        recyclerView.setAdapter(recyclerViewAdapter);
+
+
 
 
     }
