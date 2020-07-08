@@ -42,7 +42,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     ArrayList<Contact> contactArrayList;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
 
-    int id;
 
     // 1. 생성자 만들기
     public RecyclerViewAdapter(Context context, ArrayList<Contact> contactArrayList){
@@ -121,6 +120,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     AlertDialog.Builder deleteAlert = new AlertDialog.Builder(context);
                     deleteAlert.setTitle("연락처 삭제");
                     deleteAlert.setMessage("정말 삭제하시겠습니까?");
@@ -147,8 +147,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                                             Log.i("AAA",e.toString());
                                         }
                                     });
-                            ((MainActivity)context).recreate();
-//                            notifyDataSetChanged();
+
+
+                           ((MainActivity)context).recreate();
+
 //                            notifyItemChanged(index);
                         }
                     });
